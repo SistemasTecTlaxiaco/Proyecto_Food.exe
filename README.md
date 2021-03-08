@@ -1,5 +1,6 @@
-![266-2667377_png-bienvenidos-transparent-png](https://user-images.githubusercontent.com/64548201/110268930-2bad7580-7f88-11eb-8fd5-1c1ffd5afeb9.png)
-
+<p align="center">
+  ![266-2667377_png-bienvenidos-transparent-png](https://user-images.githubusercontent.com/64548201/110268930-2bad7580-7f88-11eb-8fd5-1c1ffd5afeb9.png)
+</p>
 
 # Proyecto de Ingenieria de Software
 En este repositorio se aloja el proyecto escolar para la creación de una plataforma de establecimientos de comida.<br />
