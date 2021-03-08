@@ -7,8 +7,8 @@ Bajo el argumento de que al venir de generaciones donde las redes sociales han a
 compartir el establecimiento.
 
 
-Los integrantes del equipo:
-*Nancy Velasco Santiago
-*Dulce Belem Mendoza Acuña
-*Brenda López Pérez
-*Jeser Leonel Peña Nieto
+Los integrantes del equipo:<br />
+*Nancy Velasco Santiago <br />
+*Dulce Belem Mendoza Acuña <br />
+*Brenda López Pérez <br />
+*Jeser Leonel Peña Nieto <br />
