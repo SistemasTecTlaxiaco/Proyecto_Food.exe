@@ -38,49 +38,49 @@
         $nombre=$_POST['usuario'];
         $telefono=$_POST['telefono'];
         $contra=$_POST['contraseña'];
-       // $doc_valida=$_POST['archivo'];
         $doc_valida='no especificado';
         $horario='no definido';
+        $datos=['telefono'=>$telefono,'contra'=>$contra];
+        
+        if($this->model->iniciarsesion1($telefono,'no'))
+        {
+          echo "Ya existe en el registro";
+          $this->view->mensaje = "Hubo un error en
+             la solicitud o no existe la pagina";
+          require_once 'views/errores.php';  
 
-        /*echo $matricula;
-        echo $nombre;
-        echo $apellido;*/
+        }else{
        $datos2=['nombre'=>$nombre,'telefono'=>$telefono,'contra'=>$contra, 'doc_valida'=>$doc_valida, 'horario'=>$horario];
-     // $this-> model-> insert($datos);
-        //$this->model->insert(['matricula'=>$matricula,'nombre'=>$nombre,'apellido'=>$apellido]);
-    //    echo "Nuevo estudiante creado";
-         if($this->model->insert2($datos2))
+    
+       if($this->model->insert2($datos2))
         {
          echo "Nuevo establecimiento registrado";
          require_once 'views/home_establecimiento.php';
 
         }else
         {
-           // include_once "errores.php";
-           // $Errores=new Errores();
             echo "Error dato duplicado o revise la informacion capturada :)";
             
         }
-        //echo "Error dato duplicado o revise la informacion capturada";
-       }
-       function sesion1(){
+      }
+      }
+      function sesion1(){
+
         $telefono=$_POST['telefono'];
         $contra=$_POST['contraseña'];
         $datos=['telefono'=>$telefono,'contra'=>$contra];
         if($this->model->iniciarsesion1($telefono,$contra))
         {
-         echo "Inicio de sesion exitoso";
-         //require_once 'views/home_establecimiento.php';
+       //  echo "Inicio de sesion exitoso";
+        include_once './views/home_establecimiento.php';
 
         }else
         {
-           // include_once "errores.php";
-           // $Errores=new Errores();
-         //  include('errores.php');
-        //  require $url;
-           $this->view->mensaje = "Hubo un error en
-           la solicitud o no existe la pagina";
+          
+           include_once 'errores.php';  
+        echo "error";
          //  $url='views/errores.php';
+       
 
     $this->view->render('errores');
 
