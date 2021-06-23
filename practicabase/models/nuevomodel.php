@@ -3,7 +3,7 @@ class NuevoModel extends Model{
     public function __construct(){
         parent::__construct();
     }
-    public function insert($datos){
+     public function insert($datos){
 
         try{
 
@@ -20,7 +20,7 @@ class NuevoModel extends Model{
         }
 
     }
-    public function insert2($datos){
+     public function insert2($datos){
         try{
 
             $query=$this->db->connect()->prepare('INSERT INTO establecimiento (NOMBRE, TELEFONO, CONTRA, DOC_VALIDA, HORARIO) VALUES (:nombre, :telefono, :contra, :doc_valida, :horario)');
@@ -35,22 +35,28 @@ class NuevoModel extends Model{
             return false;
         }
     }
-    public function iniciarsesion1($telefono,$contra){
-        $query=$this->db->connect()->prepare('SELECT * FROM cliente WHERE telefono=$telefono and contra=$contra');
-        $row=$query->fetch();
+     public function iniciarsesion1($telefono,$contra){
+     
         try{
             $db = $this->db->connect();
-           // $hash_password= hash('sha256', $contra); //Password encryption 
+           // $hash_password= hash('sha256', $contra); //encriptacion de contraseña
+           if($contra=="no"){
+            $stmt = $db->prepare("SELECT id_establecimiento FROM establecimiento WHERE (telefono=:telefono)"); 
+            $stmt->bindParam("telefono", $telefono,PDO::PARAM_STR) ;
+           }
+           else{
             $stmt = $db->prepare("SELECT id_establecimiento FROM establecimiento WHERE (telefono=:telefono) AND contra=:contra"); 
             $stmt->bindParam("telefono", $telefono,PDO::PARAM_STR) ;
-            $stmt->bindParam("contra", $contra,PDO::PARAM_STR) ;
+            $stmt->bindParam("contra", $contra,PDO::PARAM_STR) ;}
+            
             $stmt->execute();
             $count=$stmt->rowCount();
             $data=$stmt->fetch(PDO::FETCH_OBJ);
             $db = null;
             if($count)
             {
-            $_SESSION['id_establecimiento']=$data->id_establecimiento; // Storing user session value
+                session_start();
+            $_SESSION['id_establecimiento']=$data->id_establecimiento; // 
             return true;
             }
             else
