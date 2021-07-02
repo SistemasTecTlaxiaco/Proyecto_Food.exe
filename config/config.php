@@ -1,6 +1,6 @@
 <?php
 //mantiene estructura sin importar que parte del documento se acceda
-define ('URL','http://localhost/practicabase/');
+define ('URL','https://localhost/practicabase/');
 //variables para la base de datos
 define ('HOST','localhost');
 define ('DB','base de datos');
