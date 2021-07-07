@@ -8,8 +8,8 @@
     
         <title>PRINCIPAL</title>
         <link rel="shortcut icon" href="public/IMG/icono.png"> 
-    <link rel="stylesheet" href="public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
+   <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
 
     </head>
     <body class="inicial">
@@ -20,13 +20,13 @@
 <table style="width: calc(100% - 120px);"> 
 
  <tr> 
-<td><button id="ex" type="submit" value="INICIAR SESION"><img src="./public/IMG/usuario.png"  height="30px" width="30px"/><a href="inicio_cliente"> INICIAR SESION</a></button></td>
-<td><button id="ex" type="submit" value="EXPLORAR"><img src="public/IMG/buscar.png"  height="30px" width="30px"/><a href="home_cliente">EXPLORAR</a></button></td>
-<td><button id="ex" type="submit" value="INICIAR SESION"><img src="public/IMG/empresa.png"  height="30px" width="30px"/><a href="inicio_establecimiento">  INICIAR SESION</a></button></td>
+<td><button id="ex" type="submit" value="INICIAR SESION"><img src="<?php echo constant('URL');?>public/IMG/usuario.png"  height="30px" width="30px"/><a href="inicio_cliente"> INICIAR SESION</a></button></td>
+<td><button id="ex" type="submit" value="EXPLORAR"><img src="<?php echo constant('URL');?>public/IMG/buscar.png"  height="30px" width="30px"/><a href="home_cliente">EXPLORAR</a></button></td>
+<td><button id="ex" type="submit" value="INICIAR SESION"><img src="<?php echo constant('URL');?>public/IMG/empresa.png"  height="30px" width="30px"/><a href="inicio_establecimiento">  INICIAR SESION</a></button></td>
  </tr> 
   <tr>    
 
-        <td colspan="3"><img src="public/IMG/icono.png" height="500px" width="500px"></td>
+        <td colspan="3"><img src="<?php echo constant('URL');?>public/IMG/icono.png" height="500px" width="500px"></td>
  </tr>
 </table>
 </div>
