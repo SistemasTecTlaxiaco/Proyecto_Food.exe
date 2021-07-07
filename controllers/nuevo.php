@@ -14,25 +14,25 @@
            echo $nombre;
            echo $apellido;*/
           $datos=['usuario'=>$usuario,'telefono'=>$telefono,'contra'=>$contra];
-        // $this-> model-> insert($datos);
-           //$this->model->insert(['matricula'=>$matricula,'nombre'=>$nombre,'apellido'=>$apellido]);
-       //    echo "Nuevo estudiante creado";
-            if($this->model->insert($datos))
-           {
-            echo "Nuevo cliente creado";
-          //  require_once 'views/home_cliente.php';
-            $controller->loadModel('home_cliente');
+        if($this->model->iniciarsesion2($telefono,'no'))
+        {
+         $this->view->mensaje = "Ya existe en el registro";
+         $this->view->render('errores');  
 
-           // $this->view->render('home_cliente');
+        }else{
+    //Si los datos no estan duplicados o erroneos, abre la pagina inicial
+       if($this->model->insert($datos))
+        {
+         echo "Nuevo establecimiento registrado ";
+         require_once 'views/inicio_cliente.php';
 
-           }else{
-               
-               echo "Error dato duplicado o revise la informacion capturada :)";
-              // $this->view->render('errores');
-               //  include ("registro_cliente.php");
-
-            }
-           //echo "Error dato duplicado o revise la informacion capturada";
+        }else
+        {
+         $this->view->mensaje = "Error, dato duplicado o revise la informacion capturada";
+         $this->view->render('errores');  
+            
+        }
+      }
        }
        function registrarEstablecimiento(){
         $nombre=$_POST['usuario'];
@@ -44,10 +44,8 @@
         
         if($this->model->iniciarsesion1($telefono,'no'))
         {
-          echo "Ya existe en el registro";
-          $this->view->mensaje = "Hubo un error en
-             la solicitud o no existe la pagina";
-          require_once 'views/errores.php';  
+            $this->view->mensaje = "Ya existe el dato en el registro";
+         $this->view->render('errores');    
 
         }else{
        $datos2=['nombre'=>$nombre,'telefono'=>$telefono,'contra'=>$contra, 'doc_valida'=>$doc_valida, 'horario'=>$horario];
@@ -55,12 +53,12 @@
        if($this->model->insert2($datos2))
         {
          echo "Nuevo establecimiento registrado";
-         require_once 'views/home_establecimiento.php';
+         require_once 'views/inicio_establecimiento.php';
 
         }else
         {
-            echo "Error dato duplicado o revise la informacion capturada :)";
-            
+             $this->view->mensaje = "Error dato duplicado o revise la informacion capturada";
+         $this->view->render('errores');  
         }
       }
       }
@@ -76,18 +74,26 @@
 
         }else
         {
-          
-           include_once 'errores.php';  
-        echo "error";
-         //  $url='views/errores.php';
-       
-
-    $this->view->render('errores');
-
-            echo "Error, dato no encontrado, revise la informacion capturada :)";
+           //ESTE SI FUNCIONA PARA MOSTRAR ERRORES
+         $this->view->mensaje = "Error al capturar datos o el usuario no existe, revise de nuevo";
+         $this->view->render('errores');
             
         }
        }
+      function sesion2(){
+
+         $telefono=$_POST['telefono'];
+         $contra=$_POST['contra'];
+         $datos=['telefono'=>$telefono,'contra'=>$contra];
+         if($this->model->iniciarsesion2($telefono,$contra))
+         {
+         include_once './views/home_clientelogin.php';
+         }else
+         {
+            $this->view->mensaje = "Error al iniciar sesion, revise la informacion capturada";
+            $this->view->render('errores');             
+         }
+        }
 
    }
 
