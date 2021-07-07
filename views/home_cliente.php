@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
 </head>
 <body class="mapa">
 <?php require 'views/header.php';?>
         
 <div id="content"> 
    <div>
-   <!--<form id="searchform">
-			<input type="search" id="s" placeholder="Búsqueda">
-		</form>-->
         <h1 style="text-align:center; color:red;">MAPA<H1>
    </div> 
     <div class="mapa">
