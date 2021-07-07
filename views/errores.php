@@ -2,8 +2,8 @@
 <html  lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>INDEX ERROR</title>
-        <link rel="stylesheet" href="public/css/login.css" type="text/css">
+        <title>ERROR</title>
+        <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
    
     </head>
     <body>
