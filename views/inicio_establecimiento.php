@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
-    <script type="text/javascript" src="./public/css/funciones.js"></script>
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
+    <script type="text/javascript" src="<?php echo constant('URL');?>public/css/funciones.js"></script>
 
 </head>
 <body class="inicial" id="pawegrap">
 <?php require 'views/header.php';?>
 <div id="content">
-    <img style="float:left;" src="./public/IMG/icono.png" alt="descripción" />
+    <img style="float:left;"  src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
 
     <article class="cuadro-inicial">
     <form action="<?php echo constant('URL');?>nuevo/sesion1" method="post" id="cuadro" class="cuadro">
