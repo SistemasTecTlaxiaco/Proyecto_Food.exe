@@ -15,7 +15,8 @@ class NuevoModel extends Model{
                 return false;
             }
         }catch(PDOException $e){
-            echo "ya existe el cliente";
+            $this->view->mensaje = "Ya existe el cliente";
+            $this->view->render('errores');  
             return false;
         }
 
@@ -31,7 +32,8 @@ class NuevoModel extends Model{
                 return false;
             }
         }catch(PDOException $e){
-            echo "ya existe el establecimiento";
+          $this->view->mensaje = "Ya existe el establecimiento";
+            $this->view->render('errores');  
             return false;
         }
     }
@@ -57,6 +59,40 @@ class NuevoModel extends Model{
             {
                 session_start();
             $_SESSION['id_establecimiento']=$data->id_establecimiento; // 
+            return true;
+            }
+            else
+            {
+            return false;
+            } 
+            }
+            catch(PDOException $e) {
+            echo 'ALGO SALIO MAL'. $e->getMessage();
+            }
+            
+            }
+     public function iniciarsesion2($telefono,$contra){
+     
+        try{
+            $db = $this->db->connect();
+           // $hash_password= hash('sha256', $contra); //encriptacion de contraseña
+           if($contra=="no"){
+            $stmt = $db->prepare("SELECT id_cliente FROM cliente WHERE (telefono=:telefono)"); 
+            $stmt->bindParam("telefono", $telefono,PDO::PARAM_STR) ;
+           }
+           else{
+            $stmt = $db->prepare("SELECT id_cliente FROM cliente WHERE (telefono=:telefono) AND contra=:contra"); 
+            $stmt->bindParam("telefono", $telefono,PDO::PARAM_STR) ;
+            $stmt->bindParam("contra", $contra,PDO::PARAM_STR) ;}
+            
+            $stmt->execute();
+            $count=$stmt->rowCount();
+            $data=$stmt->fetch(PDO::FETCH_OBJ);
+            $db = null;
+            if($count)
+            {
+                session_start();
+            $_SESSION['id_cliente']=$data->id_cliente; // 
             return true;
             }
             else
