@@ -8,9 +8,6 @@
            $this->view->render('main');
        }
 
-       function saludo() {
-           echo "METODO SALUDO";
-       }
    }
 
 ?>
