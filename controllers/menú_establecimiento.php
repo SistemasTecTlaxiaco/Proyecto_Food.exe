@@ -1,5 +1,5 @@
 <?php
-   class home_establecimiento extends Controller
+   class menu_Establecimiento extends Controller
    {
        
        function __construct() 
