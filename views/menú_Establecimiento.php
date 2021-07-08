@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/inicio_establecimiento.php" type="text/css">
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
-    <script type="text/javascript" src="<?php echo constant('URL');?>public/css/funciones.js"></script>
+    <script type="text/javascript" src="<?php echo constant('URL');?>public/css/funciones_e.js"></script>
 
 </head>
 <body class="inicial" id="pawegrap">
@@ -27,11 +27,11 @@
 
     <p>Precio:<input type="number" placeholder="Ingresar precio" name="precio" id="precio"></p> 
 
-  <p>Imagen de muestra:<input type="file" placeholder="Seleccione archivo" name="Imgplatillo"></p> 
+    <p>Imagen de muestra:<input type="file" placeholder="Seleccione archivo" name="Imgplatillo" onchange="ValidarImagen(this);"></p> 
 
     </p>       <br>
     <!--Al presionar el boton, se validan datos desde javascript y luego si son validos se almacenan en la base de datos-->
-    <input type="submit" value="Actualizar" id="platillos" class="menú_Establecimiento" onclick="registro_es()"></input>
+    <input type="submit" value="Actualizar" id="platillos" class="menú_Establecimiento" onclick="menu_es()"></input>
 </form>
     </article>
 </div>
