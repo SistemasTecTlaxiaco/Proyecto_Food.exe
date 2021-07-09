@@ -24,7 +24,7 @@
                 echo "Solo se admited archivos jpg/jpeg";
             }
         } 
-    } else {
+    } else { 
         echo "El documento no es una imagen";
     }
-?>
+?> 

@@ -23,7 +23,7 @@ body{
     font-size:18px;
     margin: 0;
 }
- 
+
 #envoltura{
     position:absolute;
     left:70%;
@@ -114,9 +114,6 @@ input{
 	top: 75%;
 	right: 35%;
 }
-
-
-
   
 form,p{
     margin:0;

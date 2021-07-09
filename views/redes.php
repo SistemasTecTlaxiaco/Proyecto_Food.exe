@@ -11,7 +11,6 @@
 	<p><img class="img7" src="../public/imagen/descarga.jpg" alt="mas"></p>
 	<p><img class="img8" src="../public/imagen/flecha.png" alt="mas" onclick="location.href='inicio_establecimiento.php'" ></p>
     <div id="envoltura">
-
         <div id="contenedor">
             </div>
             <div id="cuerpo">

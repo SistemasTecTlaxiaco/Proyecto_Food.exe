@@ -7,7 +7,6 @@
      <link rel="stylesheet" type="text/css" href="../public/css/style.css">  
     <script type="text/javascript" src="./public/css/boton.js"></script>
 </head>
- 
 <body>
     <div id="envoltura">
         <div id="contenedor">
@@ -35,7 +34,7 @@
 						<p id="bot"><input type="submit" id="submit" name="submit" value="10" class="boton20"></p>
 						<p id="bot"><input type="submit" id="submit" name="submit" value="11" class="boton21"></p>
 						<p id="bot"><input type="submit" id="submit" name="submit" value="12" class="boton22"></p>
-             
+
             </div><!--fin cuerpo-->
         </div><!-- fin contenedor -->
     </div><!--fin envoltura-->
