@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\config",
+    "\\controllers",
+    "\\libs",
+    "\\models",
+    "\\public"
   ],
   "PreviewInSolutionExplorer": false
 }

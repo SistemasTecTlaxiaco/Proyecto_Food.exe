@@ -94,7 +94,7 @@ input#ocupado{
 
 /*NUMEROS DE MESA*/
 .boton11{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -105,8 +105,9 @@ input#ocupado{
     top: -150px;
 	left: 150px;
 }
+.boton11:visited{background:#ff0000;}
 .boton12{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
 	/*Color del texto*/
@@ -118,7 +119,7 @@ input#ocupado{
 	left: 233px;
 }
 .boton13{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -130,7 +131,7 @@ input#ocupado{
 	left: 314px;
 }
 .boton14{
-    background: #ffff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff); 
 	/*Color del texto*/
@@ -142,7 +143,7 @@ input#ocupado{
 left: 393px;
 } 
 .boton15{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -154,7 +155,7 @@ left: 393px;
 	left: 150px;
 }
 .boton16{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
 	/*Color del texto*/
@@ -166,7 +167,7 @@ left: 393px;
 	left: 233px;
 }
 .boton17{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -178,7 +179,7 @@ left: 393px;
 	left: 314px;
 }
 .boton18{
-    background: #ffff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff); 
 	/*Color del texto*/
@@ -190,7 +191,7 @@ left: 393px;
 	left: 393px;
 }  
 .boton19{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -202,7 +203,7 @@ left: 393px;
 	left: 150px;
 }
 .boton20{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
 	/*Color del texto*/
@@ -214,7 +215,7 @@ left: 393px;
 	left: 233px;
 }
 .boton21{
-    background: #fff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff);
     /*Color del texto*/
@@ -226,7 +227,7 @@ left: 393px;
 	left: 314px;
 }
 .boton22{
-    background: #ffff;
+    background: #0cf050;
     background: -webkit-linear-gradient(top,#fff,#fff);
     background: linear-gradient(top,#fff,#fff); 
 	/*Color del texto*/
@@ -238,12 +239,6 @@ left: 393px;
 	left: 393px;
 } 
  
-/*Estas instrucciones animan al boton enviar
- * para que se vea como si se pulsara*/
-.boton:active{
-    position: relative;
-    top: 3px;
-}
   
 form,p{
     margin:0;
