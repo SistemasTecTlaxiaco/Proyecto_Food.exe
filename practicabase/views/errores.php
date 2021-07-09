@@ -2,7 +2,7 @@
 <html  lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>INDEX ERROR</title>
+        <title>MENSAJE ERROR</title>
         <link rel="stylesheet" href="public/css/login.css" type="text/css">
    
     </head>
