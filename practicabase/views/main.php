@@ -6,7 +6,7 @@
         <!--Evita que al abrir en movil, el usuario haga zooom-->
     <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0">
     
-        <title>PRINCIPAL</title>
+        <title>PRINCIPAL MAIN</title>
         <link rel="shortcut icon" href="public/IMG/icono.png"> 
     <link rel="stylesheet" href="public/css/login.css" type="text/css">
     <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
