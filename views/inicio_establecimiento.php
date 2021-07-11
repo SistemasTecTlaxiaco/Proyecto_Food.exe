@@ -19,7 +19,7 @@
     <h1>INICIAR SESIÓN ESTABLECIMIENTO</h1>
     <p>Usuario:<input type="text" placeholder="Ingrese telefono" name="telefono"></p>    
     <p>Contraseña:<input type="password" placeholder="Ingrese contraseña" name="contraseña"></p>
-    <br><p>Aun no tienes una cuenta <a href="registro_establecimiento">Registrarse </a> </p>
+    <br><p>Aun no tienes una cuenta <a href="<?php echo constant('URL');?>registro_establecimiento">Registrarse </a> </p>
     <input type="submit" value="INGRESAR" onclick="registro_es()"></input>
     <br><br>
 </form>
