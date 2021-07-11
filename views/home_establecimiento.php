@@ -4,6 +4,8 @@ include_once("./models/nuevomodel.php");
 include_once("./libs/model.php");
 $this->db=new Database();
 $db = $this->db->connect();
+error_reporting(0);
+session_start();
 $idusuario=$_SESSION['id_establecimiento'];
 //echo $idusuario;
 $query= $db->prepare("SELECT * FROM establecimiento WHERE id_establecimiento='$idusuario'");
