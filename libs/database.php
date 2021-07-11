@@ -18,7 +18,7 @@ class Database{
     }
     function connect(){
         try{
-             $dsn = 'mysql:host=pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;port=3306;dbname=gdxzaewzup8sigpm';
+             $ DNS = 'mysql: host = pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com; puerto = 3306; dbname = gdxzaewzup8sigpm' ;
 $username = 'nj4v3bybsyrznops';
 $password = 'kcaoyaygqjrt2ry9';         
 $options = array(
