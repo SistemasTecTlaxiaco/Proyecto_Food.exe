@@ -1,0 +1,105 @@
+/* Curso CSS estilos aprenderaprogramar.com*/
+*{font-family: arial;}
+body { background:#F6ECD2;
+}
+/* div {border-style: solid; border-width:2px; margin:7px; padding:7px; background-color: #FFEFD5; } */
+#caja1{ 
+	background:#FD9C28;
+	padding:50px;
+	width: 1443px;}
+#caja2{ 
+	border-radius:20px;
+	border-color:gray; 
+	border-style: solid; 
+	border-width:2px; 
+	background:#FAF5E6;
+	margin:40px; 
+	padding:80px;}
+#caja3{
+	border-radius:20px;
+	border-color:gray; 
+	border-style: solid; 
+	border-width:2px; 
+	background:#FAF5E6;
+	margin:40px; 
+	padding:80px;}
+#caja4{
+	border-radius:20px;
+	border-color:gray; 
+	border-style: solid; 
+	border-width:2px; 
+	background:#FAF5E6;
+	margin:40px; 
+	padding:80px;}
+	
+.img1 { 
+	padding: 10px; 
+	margin: 10px;
+	width:90px; 
+	height:90px;	
+	float: right; 
+	position: absolute;
+	top: 0%;
+	left: 0%;
+ }
+.img2 { 
+	padding: 10px; 
+	margin: 10px;
+	width:100px; 
+	height:100px;	
+	float: right; 
+	position: absolute;
+	top: 0%;
+	left: 8%;
+ }
+ .img3 { 
+	padding: 10px; 
+	margin: 10px;
+	width:90px; 
+	height:90px;	
+	float: right; 
+	position: absolute;
+	top: 25%;
+	left: 4%; 
+ }
+  .img4{ 
+	padding: 10px; 
+	margin: 10px;
+	width:90px; 
+	height:90px;	
+	float: right; 
+	position: absolute;
+	top: 53%;
+	left: 4%; 
+ }
+  .img5 { 
+	padding: 10px; 
+	margin: 10px;
+	width:90px; 
+	height:90px;	
+	float: right; 
+	position: absolute;
+	top: 81%;
+	left: 4%;
+ }
+ .boton{
+    background: #0cf050;
+    background: -webkit-linear-gradient(top,#11f211,#11f211);
+    background: linear-gradient(top,#11f211,#11f211);
+    width: 60px;
+	left:100%;
+ }
+ form,p{
+    margin:0;
+}
+ 
+p{
+    /*Para que los elementos del cuerpo
+     * se separen entre ellos */
+    padding-bottom: 5px;
+}
+ 
+/*Para separar el botón de ingresar*/
+p#bot{
+    padding-top: 10px;
+}
