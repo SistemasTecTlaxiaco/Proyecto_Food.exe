@@ -19,9 +19,9 @@
     <!--Los datos del formulario son enviados a ingresar.php ahi se usan para almacenarlos en la base de datos-->
     <form action="<?php echo constant('URL');?>nuevo/registrarEstablecimiento" method="post" id="cuadro" class="cuadro">
     <h1>REGISTRO ESTABLECIMIENTO</h1>
-    <p>Nombre del establecimiento:<input type="text" placeholder="Ingrese nombre" name="usuario" id="usuario"></p>    
-    <p>Contraseña:<input type="password"  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Contraseña" name="contraseña" id="contraseña"></p>
-    <p>Telefono:<input type="tel" pattern="(\+52|0052|52)?[ -]*(9)[ -]*([0-9][ -]*){9}"  placeholder="9531712545" name="telefono" id="telefono"></p>   
+    <p>Nombre del establecimiento:<input type="text" placeholder="Ingrese nombre" name="usuario" required id="usuario"></p>    
+    <p>Contraseña:<input type="password"  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required placeholder="Contraseña" name="contraseña" id="contraseña"></p>
+    <p>Telefono:<input type="tel" pattern="(\+52|0052|52)?[ -]*(9)[ -]*([0-9][ -]*){9}" required placeholder="9531712545" name="telefono" id="telefono"></p>   
    <br> <p>Archivo comprobatorio:<input type="file" placeholder="Seleccione archivo" name="archivo"></p>   
    <br><label>Ubicacion:</label><button type="button" name="ubicacion" onclick="geoloc()" >ubicar</button>
     <label id="demo"></label>
