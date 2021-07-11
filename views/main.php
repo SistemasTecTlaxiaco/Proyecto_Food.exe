@@ -8,8 +8,8 @@
     
         <title>PRINCIPAL</title>
         <link rel="shortcut icon" href="public/IMG/icono.png"> 
-   <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
+   <link rel="stylesheet" href="public/css/login.css" type="text/css">
+    <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
 
     </head>
     <body class="inicial">
