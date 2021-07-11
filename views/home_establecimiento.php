@@ -32,7 +32,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
 <body id="pawegrap" >
 <div id="header2">
     <ul class="clearfix" >
-        <li><a href="<?php echo constant('URL');?>main"> &#x1F37D Food.exe</a></li>
+        <li><a href="main.php"> &#x1F37D Food.exe</a></li>
         
     </ul>
    </div>  
@@ -41,7 +41,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         <span>&#8803</span>
       </div>
       <ul>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">Menu</a></li>
+        <li ><a href="menu_Establecimiento.php" id="barra">Menu</a></li>
         <li></li>
         <li><a href="#" id="barra">Ofertas</a></li>
         <li></li>
