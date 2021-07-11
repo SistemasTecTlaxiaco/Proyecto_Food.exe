@@ -18,7 +18,7 @@ class Database{
     }
     function connect(){
         try{
-            $dsn = 'mysql:host=localhost;port=3307;dbname=base de datos';
+            $dsn = 'mysql:host=localhost;port=3306;dbname=base de datos';
 $username = 'root';
 $password = '';
 $options = array(
