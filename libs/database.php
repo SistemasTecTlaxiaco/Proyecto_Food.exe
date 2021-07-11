@@ -18,9 +18,9 @@ class Database{
     }
     function connect(){
         try{
-            $dsn = 'mysql:host=localhost;port=3307;dbname=base de datos';
-$username = 'root';
-$password = '';
+             $dsn = 'mysql:host=pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;port=3306;dbname=gdxzaewzup8sigpm';
+$username = 'nj4v3bybsyrznops';
+$password = 'kcaoyaygqjrt2ry9';         
 $options = array(
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8mb4'",
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
