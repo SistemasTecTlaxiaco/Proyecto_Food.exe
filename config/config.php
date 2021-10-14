@@ -1,6 +1,7 @@
 <?php
 //mantiene estructura sin importar que parte del documento se acceda
-const URL="https://food2exe.herokuapp.com/";
+define ('URL','https://profood.herokuapp.com/');
+
 //variables para la base de datos
 define ('DB_HOST','pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
 define ('DB_NAME','gdxzaewzup8sigpm');
