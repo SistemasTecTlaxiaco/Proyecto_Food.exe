@@ -19,10 +19,6 @@
 				<b>REDES DISPONIBLES</b>
 				</p>
 				<br>
-					<p style="width:50px; color:black; face:Cambria,arial; align:left;">
-					<img class="img1" src="<?php echo constant('URL');?>public/imagen/facebook.png" alt="facebook" >
-					<br><b>FACEBOOK<b></p>
-					
 					<p style="size:6; color:black; face:Cambria,arial; align:left;">
 					<img class="img2" src="<?php echo constant('URL');?>public/imagen/instagram.png" alt="instagram" >
 					<br><br><b>INSTAGRAM<b></p>
