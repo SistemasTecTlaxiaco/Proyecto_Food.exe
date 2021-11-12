@@ -1,5 +1,4 @@
-<?php
-include("libs/database.php")
+<?php include("libs/database.php")
 
 if (isset($_POST['actualizar'])) {
     if (strlen($_POST['nombrecompleto']) >= 1 &&
