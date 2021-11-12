@@ -1,3 +1,5 @@
+ 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,16 +26,21 @@
 			<label>Descripción:</label>
 			<textarea class="form-control" name="cara" id="cara" placeholder="Introduzca breve descripción">
 			</textarea> </div> <br>
+
+	<div class="form-group">
+			<label>Precio normal:</label>
+			<input type="number" class="form-control" name="precio" id="precio" >
+			</div> <br>
 	<div class="form-group">
 			<label>Precio con descuento:</label>
-			<input type="number" class="form-control" name="precio" id="precio" >
+			<input type="number" class="form-control" name="preciodesc" id="precio" >
 			</div> <br>							
 				<!--	<form id="login" name="login" action="upload.php" method="POST" enctype="multipart/form-data">
 					<input style="position:absolute; top:350px;left:200px;" type="file" name="file">
 					<p><img class="img5" src="<?php echo constant('URL');?>public/imagen/galeria.png" alt="mas"></p>
 					</form>-->
 					<img style="width:50px;"src="<?php echo constant('URL');?>public/imagen/mas.png" alt="mas">     
-					<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR" onclick="menu_es()"></input>
+					<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR" onclick="menu_es()" name="actualizar"></input>
                 </form>
 </body>
 </html>
