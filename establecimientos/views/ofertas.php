@@ -24,11 +24,6 @@
 			<label>Descripción:</label>
 			<textarea class="form-control" name="cara" id="cara" placeholder="Introduzca breve descripción">
 			</textarea> </div> <br>
-
-	<div class="form-group">
-			<label>Precio normal:</label>
-			<input type="number" class="form-control" name="precio" id="precio" >
-			</div> <br>
 	<div class="form-group">
 			<label>Precio con descuento:</label>
 			<input type="number" class="form-control" name="precio" id="precio" >
