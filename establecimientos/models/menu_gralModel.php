@@ -68,7 +68,7 @@ include_once 'models/platillo.php';
        }
        public function delete($id){
         try{
-            $query = $this->db->connect()->query("DELETE FROM platillos WHERE id_platillos = :'$id'");
+            $query = $this->db->connect()->query("DELETE FROM platillos WHERE id_platillos ='$id'");
 
           //  $query->execute(['id_platillos'=> $id ]);
             return true;
