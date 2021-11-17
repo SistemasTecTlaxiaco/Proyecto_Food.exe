@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>ERROR</title>
-        <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
    
     </head>
     <body>
     <?php require 'views/header.php';?>
-        <div id="main">
+            <img  id="e" src="<?php echo constant('URL');?>public/IMG/error3.svg" alt="descripción" />
+        <div  id="error" class="error">
             <h1 class="error"><?php echo $this->mensaje; ?></h1>
         </div>
-        <?php require 'views/footer.php';?>
         
    </body>
 
