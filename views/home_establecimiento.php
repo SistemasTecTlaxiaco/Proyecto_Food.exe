@@ -19,58 +19,66 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="public/css/cabecera.css" type="text/css">
-    <link rel="stylesheet" href="public/css/barra.css" type="text/css">
-    <link rel="stylesheet" href="public/css/barra.js" type="text/css">
-    <link rel="stylesheet" href="../public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="../public/css/cabecera.css" type="text/css">
-    <link rel="stylesheet" href="../public/css/barra.css" type="text/css">
-    <link rel="stylesheet" href="../public/css/barra.js" type="text/css">
-
+   
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.js" type="text/css">
+   
 
     <title>HOME ESTABLECIMIENTO</title>
 </head>
-<body id="pawegrap" >
+<body>
 <div id="header2">
     <ul class="clearfix" >
-        <li><a href="views/main.php"> &#x1F37D Food.exe</a></li>
+        <li><a href="<?php echo constant('URL');?>home_establecimiento"> &#x1F37D Food.exe</a></li>
         
     </ul>
    </div>  
-<div id="sidebar">
-      <div class="toggle-btn">
-        <span>&#8803</span>
-      </div>
-      <ul>
+<div id="lateral">
+      <ul class="clearfix">
         <li>
         <!--  <img src="img/logo.jpg" alt="Logo Fazt" class="logo"> -->
         </li>
 
-        <li ><a href="#" id="barra">Menu</a></li>
-        <li></li>
-        <li><a href="#" id="barra">Ofertas</a></li>
-        <li></li>
-        <li><a href="#" id="barra">Redes sociales</a></li>
-        <li></li>
-        <li><a href="#" id="barra">Mesas disponibles</a></li>
-        <li></li>
-        <li><a href="#" id="barra">Lista de pedidos</a></li>
-        <li></li>
-        <li><a href="#" id="barra">Mapa de establecimientos</a></li>
-
-
       </ul>
  </div>
- <img style="float:left;" src="../public/IMG/icono.png" alt="descripción" />
+ 
+<article id="tabla">
+      <ul id="menu">
+        <li ><a href="<?php echo constant('URL');?>menu_gral" id="barra">
+        <button class="redondo" id="uno">
+        MENU</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>ofertas_gral" id="barra">
+        <button class="redondo" id="dos">
+        OFERTAS</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>redes" id="barra">
+        <button class="redondo" id="tres">
+        REDES SOCIALES</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>mesas" id="barra">
+        <button class="redondo" id="cuatro">
+        MESAS DISPONIBLES</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
+        <button class="redondo" id="cinco">
+        LISTA DE PEDIDOS</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
+        <button class="redondo" id="seis">
+          MAPA</button></a></li>
+        <li></li>
+        <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
+        <button class="redondo" id="siete">CERRAR SESION</button></a></li>
+        
+    </ul>
+</article>
+      <article id="datos">
+    <h3 id="food">DATOS DEL ESTABLECIMIENTO</h3>
+    <img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />
 
-      <article class="cuadro-inicial">
-    <h1 style="color: #fd9c28; text-align: left;">DATOS DEL ESTABLECIMIENTO</h1>
-    <?php
-                include_once 'models/establecimiento.php';  
-                $establecimiento=new Establecimiento();
-                ?>  
-    <h2 style=" text-align: left;">            
+    <h4 style=" text-align: left;">            
     <strong> Nombre </strong> : <?php echo utf8_decode($row['nombre']);?><br><br><br>
     <strong> Telefono </strong> : <?php echo utf8_decode($row['telefono']);?><br><br><br>
     <strong> Contraseña </strong> : <?php echo utf8_decode($row['contra']);?><br><br><br>
@@ -82,7 +90,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
    
     </article>
 
-    <script src="../../public/css/barra.js"></script>
+    <script src="<?php echo constant('URL');?>public/css/barra.js"></script>
 
 </body>
 </html>
