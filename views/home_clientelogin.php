@@ -18,8 +18,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.css" type="text/css">
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.js" type="text/css">
 
@@ -41,7 +40,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         <li>
         <!--  <img src="img/logo.jpg" alt="Logo Fazt" class="logo"> -->
         </li>
-        <li><a href="#" id="barra">Ofertas cercanas</a></li>
+        <li><a href="<?php echo constant('URL');?>lista_establecimientos" id="barra">Establecimientos cercanos</a></li>
         <li></li>
         <li><a href="#" id="barra">Redes sociales</a></li>
         <li></li>
@@ -54,11 +53,9 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
 
       </ul>
  </div>
- <img style="float:center; width: 150px" src="../public/IMG/perfil.png" alt="descripción" />
-
-      <article class="cuadro-inicial">
-    <h1 style="color: #fd9c28; text-align: center;">DATOS DEL COMENSAL</h1>
-    <h2 style=" text-align: center;">            
+      <article id="datos">
+    <h1 id="food">DATOS DEL COMENSAL</h1>
+    <img style="float:center; width: 150px" src="../public/IMG/user.svg" alt="descripción" />
     <strong> Nombre </strong> : <?php echo utf8_decode($row['usuario']);?><br><br><br>
     <strong> Telefono </strong> : <?php echo utf8_decode($row['telefono']);?><br><br><br>
     <strong> Contraseña </strong> : <?php echo utf8_decode($row['contra']);?><br><br><br>
