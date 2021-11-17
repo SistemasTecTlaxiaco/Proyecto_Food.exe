@@ -16,14 +16,13 @@
             <li></li>
 			<li>Food.exe</a></li>
             <li ><a href="https://api.whatsapp.com/send?phone=+5219531712545">
-<img src="public/IMG/whatsapp.png"  height="30px" width="30px"/></a></li>
-            <li ><img src="public/IMG/facebook.png"  height="30px" width="30px"/></li>
-            <li ><img src="public/IMG/instagram.png"  height="30px" width="30px"/></li>
+            <img src="<?php echo constant('URL');?>public/IMG/whatsapp.png"  height="30px" width="30px"/></a></li>
+            <li ><img src="<?php echo constant('URL');?>public/IMG/facebook.png"  height="30px" width="30px"/></li>
+            <li ><img src="<?php echo constant('URL');?>public/IMG/instagram.png"  height="30px" width="30px"/></li>
             <li><a href="#inicio">Politicas de privacidad</a></li><li></li>
             <li><a href="#inicio">Soporte</a></li><li></li>
             <li><a href="#inicio">Ayuda</a></li>
 		</ul>
 </div>
-
 </body>
 </html>
