@@ -115,6 +115,10 @@
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 }
+#input{
+	border:none;
+	border-bottom: #ff8c00;
+}
 #i{
 	position:relative;
 	width: 600px;
@@ -124,7 +128,7 @@
 #e{
 	position: absolute;
 	transform: translate(-50%, -50%);/*Para que se mueva segun cambia tamaño*/
-
+	width: 40%;
 	top: 42%;
 	left:50%;
 	width: 300x;
@@ -251,3 +255,17 @@ td:empty {background: hsla(50, 25%, 60%, 0.7); }
 #filas:hover:not(#firstrow), td:empty {background: rgb(243, 143, 67); pointer-events: visible;}
 #filas:hover { transform: scale(1.0); font-weight: 700; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);}
 
+
+#fila_vacia{
+	background:rgb(255, 171, 97);
+}
+#rotar{
+	background-color: #f89718f1;
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg);
+	width: 5%;
+
+}
+#logo_restaurante{
+	width: 10px;
+}
