@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/login.css"  type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css"  type="text/css">
 
     <title>Encabezado</title>
 </head>
 <body>
    <div id="header">
-    <ul class="clearfix" >
-        <li><a href="main">Inicio</a></li>
+    <ul>
+      <li>
+   <!-- REGRESA A PAGINA ANTERIOR-->
+
+    <a href="javascript: history.go(-1)">
+     <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
+  
     </ul>
    </div>  
 </body>
