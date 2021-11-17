@@ -5,5 +5,7 @@ class establecimiento{
     public $ubicacion;
     public $horario;
     public $contra;
+    public $id_establecimiento;
+
 }
 ?>
