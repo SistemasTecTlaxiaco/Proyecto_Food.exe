@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/login.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/cabecera.css" type="text/css">
-    <script type="text/javascript" src="<?php echo constant('URL');?>public/css/funciones.js"></script>
+    <meta http-equiv="Expires" content="0"> <meta http-equiv="Last-Modified" content="0"> 
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <title>LOGIN ESTABLECIMIENTO</title>
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
 </head>
-<body class="inicial" id="pawegrap">
+<body id="inicial">
 <?php require 'views/header.php';?>
-<div id="content">
-    <img style="float:left;"  src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
+<img  id="i" src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
 
-    <article class="cuadro-inicial">
-    <form action="<?php echo constant('URL');?>nuevo/sesion1" method="post" id="cuadro" class="cuadro">
-    <h1>INICIAR SESIÓN ESTABLECIMIENTO</h1>
-    <p>Usuario:<input type="text" placeholder="Ingrese telefono" name="telefono"></p>    
-    <p>Contraseña:<input type="password" placeholder="Ingrese contraseña" name="contraseña"></p>
-    <br><p>Aun no tienes una cuenta <a href="<?php echo constant('URL');?>registro_establecimiento">Registrarse </a> </p>
-    <input type="submit" value="INGRESAR" onclick="registro_es()"></input>
-    <br><br>
+     <form action="<?php echo constant('URL');?>nuevo/sesion1" method="post" id="login" class="login">
+    <h3  id="titulo">INICIAR SESION ESTABLECIMIENTO</h3>
+		<img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />
+        <div class="form-group">
+			<label>Usuario:</label>
+			<input type="text" class="form-control" name="telefono" placeholder="Introduzca telefono">
+		</div> <br>
+        <div class="form-group">
+			<label >Contraseña:</label>
+			<input type="password" class="form-control"placeholder="Mayusculas, minusculas y numeros" name="contraseña">
+		</div>
+
+    <br><p>Aun no tienes una cuenta <a href="<?php echo constant('URL');?>registro_establecimiento" id="link">Registrarse </a> </p>
+    <p class="text-center">
+<input type="submit" id="ingresar" class="btn btn-primary btn-block" value="INGRESAR" onclick="registro_es()"></input></p>
 </form>
-    </article>
-</div>
-
-
 <?php require 'views/footer.php';?>
         
 </body>
