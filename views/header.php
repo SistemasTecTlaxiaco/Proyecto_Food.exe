@@ -11,7 +11,9 @@
 <body>
    <div id="header">
     <ul class="clearfix" >
-        <li><a href="<?php echo constant('URL');?>main">Inicio</a></li>
+        <li>
+            <a href="javascript: history.go(-1)">
+            <a href="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"></a></li>
     </ul>
    </div>  
 </body>
