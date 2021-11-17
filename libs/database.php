@@ -18,7 +18,7 @@ class  Database {
     }
     function  connect () {
         prueba {
-             $ dns = 'mysql: host = pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com; puerto = 3306; nombrebd = gdxzaewzup8sigpm ' ;
+             $ dns = 'mysql: host =pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com; puerto = 3306; nombrebd = gdxzaewzup8sigpm ' ;
 $ nombre de usuario = 'nj4v3bybsyrznops' ;
 $ contraseña = 'kcaoyaygqjrt2ry9' ;         
 $ opciones = matriz (
