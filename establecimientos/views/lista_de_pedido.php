@@ -30,6 +30,7 @@ echo $row['id_pedido'];
 echo $row['id_platillos'];
 echo $row['monto_total'];
 }
+    
 //Libera el resultado
 mysql_free_result($result);
 //Cierra conexion
