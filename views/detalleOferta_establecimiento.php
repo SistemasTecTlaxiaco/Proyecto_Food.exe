@@ -7,39 +7,47 @@
     <meta http-equiv="Expires" content="0"> <meta http-equiv="Last-Modified" content="0"> 
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
     <meta http-equiv="Pragma" content="no-cache"> 
-    <title>OFERTAS</title>
+    <title>DETALLE OFERTAS</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
 </head>
 <body id="inicial">
-<?php require 'views/header.php';?>
 
-    <form id="login" name="login" action="" method="post" autocomplete="off">
-	
+<?php    
+    include_once 'models/oferta.php';
+    foreach ($this->oferta as $row){
+        $oferta=new oferta();
+        $oferta=$row;
+        
+        ?>
+    <form action="<?php echo constant('URL');?>ofertas_gral/actualizarPlatillo" method="post" id="login" class="login">
+    <h3 id="titulo">MODIFICACION DE <?php echo $oferta->nombre; ?> </h3>
+   
+    <div class="form-group">
+			<label>Platillo:</label> <!--RECORDAR: Redonly para tener id_platillo pero que no se pueda modificar-->
+			<input type="text" name="id_oferta" id="id_oferta" class="form-control" readonly value="<?php echo $oferta->id_ofertas; ?>" required>
+		</div> <br>
     <div class="form-group">
 			<label>Nombre:</label>
-			<input type="text" class="form-control" id="nombrecompleto" name="nombrecompleto" placeholder="Introduzca nombre de platillo">
-			</div> <br>	
-	
-    <div class="form-group">
-			<label>Descripción:</label>
-			<textarea class="form-control" name="cara" id="cara" placeholder="Introduzca breve descripción">
-			</textarea> </div> <br>
+			<input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $oferta->nombre; ?>" required>
+		</div> <br>        
+        <div class="form-group">
+			<label>Especificaciones:</label>
+			<textarea class="form-control" name="especificacion" id="especificacion"required> <?php echo $oferta->especificacion; ?> </textarea> </div> <br>
+        <div class="form-group">
+			<label>Precio anterior:</label>
+			<input type="number" class="form-control" name="prec_anterior" id="prec_anterior" value="<?php echo $oferta->prec_anterior; ?>" required>
+		</div> <br>
+		<div class="form-group">
+			<label>Precio actual:</label>
+			<input type="number" class="form-control" name="descuento" id="descuento" value="<?php echo $oferta->descuento; ?>" required>
+		</div> <br>
+    <input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR OFERTA" ></input>
+    <?php }?>
 
-	<div class="form-group">
-			<label>Precio normal:</label>
-			<input type="number" class="form-control" name="precio" id="precio" >
-			</div> <br>
-	<div class="form-group">
-			<label>Precio con descuento:</label>
-			<input type="number" class="form-control" name="precio" id="precio" >
-			</div> <br>							
-				<!--	<form id="login" name="login" action="upload.php" method="POST" enctype="multipart/form-data">
-					<input style="position:absolute; top:350px;left:200px;" type="file" name="file">
-					<p><img class="img5" src="<?php echo constant('URL');?>public/imagen/galeria.png" alt="mas"></p>
-					</form>-->
-					<img style="width:50px;"src="<?php echo constant('URL');?>public/imagen/mas.png" alt="mas">     
-					<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR" onclick="menu_es()"></input>
-                </form>
+</form>
+    </article>
+</div>
+<?php require 'views/footer.php';?>   
 </body>
 </html>
