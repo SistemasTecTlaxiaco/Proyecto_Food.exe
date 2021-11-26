@@ -94,6 +94,63 @@
             $this->view->render('errores');             
          }
         }
+      
+        function agregarPlatillo(){
+         $nombre=$_POST['nombre'];
+         $precio=$_POST['precio'];
+         $cara=$_POST['cara'];
+         $nombre_archivo = "";
+         $carpetaDestino="imagenes/";
+         if($cara==null){
+            $cara=" ";
+         }
+            # si hay algun archivo que subir
+        if(isset($_FILES["archivo"]) && $_FILES["archivo"]["name"][0])
+        {                # si es un formato de imagen
+                if($_FILES["archivo"]["type"]=="image/jpeg" || $_FILES["archivo"]["type"][$i]=="image/png")
+                {
+                    # si existe la carpeta o se ha creado
+                    if(file_exists($carpetaDestino) || @mkdir($carpetaDestino))
+                    {
+                      $fileTmpPath = $_FILES['archivo']['tmp_name'];
+                      $fileName = $_FILES['archivo']['name'];
+                      $fileSize = $_FILES['archivo']['size'];
+                      $fileType = $_FILES['archivo']['type'];
+                      $fileNameCmps = explode(".", $fileName);
+                      $fileExtension = strtolower(end($fileNameCmps));
+                      $newFileName = $nombre . '.' . $fileExtension;
+                      $dest_path = $carpetaDestino . $newFileName;
+                        # movemos el archivo
+                        if(@move_uploaded_file($fileTmpPath, $dest_path))
+                        {
+                        }else{
+                            echo "<br>No se ha podido mover el archivo: ".$_FILES["archivo"]["name"];
+                        }
+                    }else{
+                        echo "<br>No se ha podido crear la carpeta: ".$carpetaDestino;
+                    }
+                }else{
+                    echo "<br>".$_FILES["archivo"]["name"]." - NO es imagen jpg, png o gif";
+                }
+            
+        }else{
+            echo "<br> No se ha subido ninguna imagen";
+        }
+         //Crea un objeto con los valores a insertar
+        $plato=['nombre'=>$nombre,'precio'=>$precio,'cara'=>$cara,'imagen'=>$newFileName];
+         //Si los datos no estan duplicados o erroneos, abre la pagina inicial
+       if($this->model->insertarplato($plato))
+       {
+     //  echo "Nuevo platillo registrado ";
+       $this->view->render('home_establecimiento');  
+
+      }else
+       {
+        $this->view->mensaje = "Error dato duplicado o revise la informacion capturada";
+        $this->view->render('home_establecimiento');  
+           
+       }
+        }
 
    }
 
