@@ -3,13 +3,14 @@ class NuevoModel extends Model{
     public function __construct(){
         parent::__construct();
     }
-     public function insert($datos){
+    public function insert($datos){
 
         try{
-
-            $query=$this->db->connect()->prepare('INSERT INTO cliente (USUARIO, TELEFONO, CONTRA) VALUES (:usuario, :telefono, :contra)');
-
-            if($query->execute(['usuario'=>$datos['usuario'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra']])){
+//Realiza la conexión con la base de datos y usa sentencias de insercion en tabla clientes
+            $query=$this->db->connect()->prepare('INSERT INTO cliente (USUARIO, TELEFONO, CONTRA,UBICACION) VALUES (:usuario, :telefono, :contra, :ubicacion)');
+//Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute
+            if($query->execute(['usuario'=>$datos['usuario'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'],'ubicacion'=>$datos['ubicacion']])){
+                //si la insercion es exitosa devuelve un valor verdadero
                 return true;
             }else{
                 return false;
@@ -21,23 +22,24 @@ class NuevoModel extends Model{
         }
 
     }
-     public function insert2($datos){
+    public function insert2($datos){
         try{
-
-            $query=$this->db->connect()->prepare('INSERT INTO establecimiento (NOMBRE, TELEFONO, CONTRA, DOC_VALIDA, HORARIO) VALUES (:nombre, :telefono, :contra, :doc_valida, :horario)');
-
-            if($query->execute(['nombre'=>$datos['nombre'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'], 'doc_valida'=>$datos['doc_valida'], 'horario'=>$datos['horario']])){
+            //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla Establecimiento
+            $query=$this->db->connect()->prepare('INSERT INTO establecimiento (NOMBRE, TELEFONO, CONTRA, DOC_VALIDA, HORARIO, UBICACION) 
+            VALUES (:nombre, :telefono, :contra, :doc_valida, :horario, :ubicacion)');
+            //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
+            if($query->execute(['nombre'=>$datos['nombre'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'], 'doc_valida'=>$datos['doc_valida'], 'horario'=>$datos['horario'],'ubicacion'=>$datos['ubicacion']])){
+            
                 return true;
             }else{
                 return false;
             }
-        }catch(PDOException $e){
-          $this->view->mensaje = "Ya existe el establecimiento";
+        }catch(PDOException $e){ $this->view->mensaje = "Ya existe el establecimiento";
             $this->view->render('errores');  
             return false;
         }
     }
-     public function insertarplato($datos){
+    public function insertarplato($datos){
         require_once("./views/islogin.php");
         $idusuario=$_SESSION['id_establecimiento'];
         try{
@@ -64,7 +66,30 @@ class NuevoModel extends Model{
             return false;
         }
     }
-     public function iniciarsesion1($telefono,$contra){
+    public function insertaroferta($datos){
+        require_once("./views/islogin.php");
+
+        try{
+            //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla platillos
+            $query=$this->db->connect()->prepare('INSERT INTO oferta (nombre, especificacion, prec_anterior, descuento, id_establecimiento) 
+            VALUES (:nombre, :especificacion, :prec_anterior, :descuento, :id_establecimiento)');
+
+            //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
+            if($query->execute(['nombre'=>$datos['nombrecompleto'],'especificacion'=>$datos['cara'], 'prec_anterior'=>$datos['precio'], 'descuento'=>$datos['preciodesc'], 
+            'id_establecimiento'=>$idusuario])){
+            
+                return true;
+            }else{
+                return false;
+            }
+        }catch(PDOException $e){ $this->view->mensaje = "Ya existe la oferta";
+            $this->view->render('menu_establecimiento');  
+            return false;
+        }
+    }
+
+    
+    public function iniciarsesion1($telefono,$contra){
      
         try{
             $db = $this->db->connect();
@@ -98,7 +123,9 @@ class NuevoModel extends Model{
             }
             
             }
-     public function iniciarsesion2($telefono,$contra){
+
+             
+    public function iniciarsesion2($telefono,$contra){
      
         try{
             $db = $this->db->connect();
@@ -132,7 +159,6 @@ class NuevoModel extends Model{
             }
             
             }
-
 
 }
 ?>
