@@ -5,5 +5,7 @@ class Platillo{
     public $precio;
     public $caracteristicas;
     public $id_establecimiento;
+    public $imagen;
+
 }
 ?>
