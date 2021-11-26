@@ -33,9 +33,9 @@
         
         ?>
     <tr id="filas">
+        <td><img src="<?php echo constant('URL');?>imagenes/<?php echo $platillo->imagen;?>" width="100PX">  </td>
         <td><?php echo $platillo->nombre;?></td>
-        <td><?php echo $platillo->caracteristicas;?></td>
-        
+        <td><?php echo $platillo->caracteristicas;?></td>        
         <td><?php echo $platillo->precio;?></td>
 
         <td><a href="<?php echo constant('URL').'menu_gral_cliente/Carrito/'.$platillo->id_platillos?> ">
