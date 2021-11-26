@@ -10,12 +10,21 @@
     <meta http-equiv="Pragma" content="no-cache"> 
     <title>LISTA ESTABLECIMIENTOS</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
-    <?php require 'views/header.php';?>
-
+    
+     <div id="header">
+    <ul>
+      <li>
+   <!-- REGRESA A PAGINA ANTERIOR-->
+    <a href="<?php echo constant('URL');?>home_clientelogin"> 
+     <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
+  
+    </ul>
+   </div>  
+    
 </head>
 <h1>ESTABLECIMIENTOS CERCANOS</h1><br>
 
-<table width="100" id="tabla_platos" >
+<table >
 <tbody>
 
     <?php    
@@ -25,7 +34,7 @@
         $establecimientos=$row;
         
         ?>
-        <tr id="fila_vacia"><td id="fila_vacia"></td></tr>
+        <tr id="fila_vacia"><td id="fila_vacia">   ESTABLECIMIENTO </td></tr>
     <tr id="filas">
         <td>
         <img  id="logo_res" src="<?php echo constant('URL');?>public/IMG/restaurante.png" alt="descripción" />
@@ -34,7 +43,7 @@
             
             <?php echo $establecimientos->nombre;?><br>
             <?php echo $establecimientos->telefono;?><br>
-            <?php /*echo $establecimientos->ubicacion;*/?>
+            <?php echo $establecimientos->ubicacion;?>
         </td>
       
 <td id="rotar"> <a href="<?php echo constant('URL').'lista_establecimientos/verEstablecimiento/'.$establecimientos->id_establecimiento?>">
