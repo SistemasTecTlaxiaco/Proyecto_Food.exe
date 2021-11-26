@@ -1,0 +1,24 @@
+{
+    "name": "root/proyecto",
+    "type":"proyect",
+    "authors": [
+        {
+            "name": "Nancy2050",
+            "email": "nancyvelasco17@outlook.es"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files":[
+            "libs/database.php",
+            "libs/controller.php",
+            "libs/view.php",
+            "libs/model.php",
+            "libs/app.php",
+            "libs/config.php"
+        ]
+    }
+}
