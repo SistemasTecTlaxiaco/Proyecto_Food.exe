@@ -7,6 +7,7 @@
            parent::__construct();
            $this->view->render('cerrar');
        }
+       function render(){}
 
    }
 
