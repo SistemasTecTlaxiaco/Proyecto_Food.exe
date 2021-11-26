@@ -7,6 +7,9 @@
            parent::__construct();
            $this->view->render('inicio_establecimiento');
        }
+         function render(){
+
+       }
 
    }
 
