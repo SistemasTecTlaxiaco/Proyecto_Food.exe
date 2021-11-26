@@ -6,6 +6,7 @@ class establecimiento{
     public $horario;
     public $contra;
     public $id_establecimiento;
+    public $doc_valida;
 
 }
 ?>
