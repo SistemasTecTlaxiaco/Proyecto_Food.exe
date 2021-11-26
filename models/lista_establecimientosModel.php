@@ -17,7 +17,7 @@ include_once 'models/establecimiento.php';
                 $item=new establecimiento();
                 $item->nombre=$row['nombre'];
                 $item->telefono=$row['telefono'];
-         //      $item->ubicacion=$row['ubicacion'];
+                $item->ubicacion=$row['ubicacion'];
                 $item->id_establecimiento=$row['id_establecimiento'];
                 $item->horario=$row['horario'];
                 
@@ -38,7 +38,7 @@ include_once 'models/establecimiento.php';
                 $item=new establecimiento();
                 $item->nombre=$row['nombre'];
                 $item->telefono=$row['telefono'];
-               // $item->ubicacion=$row['ubicacion'];
+                $item->ubicacion=$row['ubicacion'];
                 $item->id_establecimiento=$row['id_establecimiento'];
                 $item->horario=$row['horario'];
                 
