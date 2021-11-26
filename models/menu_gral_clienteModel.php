@@ -18,6 +18,7 @@ include_once 'models/oferta.php';
             while($row=$query->fetch((PDO::FETCH_ASSOC))){
                 $item=new platillo();
                 $item->nombre=$row['nombre'];
+                $item->imagen=$row['imagen'];             
                 $item->precio=$row['precio'];
                 $item->caracteristicas=$row['caracteristicas'];
                 $item->id_establecimiento=$row['id_establecimiento'];
