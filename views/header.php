@@ -10,7 +10,7 @@
 </head>
 <body>
    <div id="header">
-    <ul class="clearfix" >
+    <ul >
         <li>
             <a href="javascript: history.go(-1)">
             <a href="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"></a></li>
