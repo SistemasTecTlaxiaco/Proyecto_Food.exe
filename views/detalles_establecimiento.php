@@ -14,6 +14,21 @@
 
 </head>
 <body >  
+    
+        <!--Encabezado-->
+        <div class="header-main">
+          <div class="main-content">
+            <ul class="elementos-header">
+            <!--ICONO PRINCIPAL ESQUINA SUPERIOR-->
+            <a href="#"> 
+              <img src="<?php echo constant('URL');?>public/IMG/logo.png" class="logo"></a>
+
+            <!--SESION CON NOMBRE ESTABLECIMIENTO--> <li>    
+                 <img src="<?php echo constant('URL');?>public/IMG/user.svg" height="30px" width="30px"/> 
+                </li>
+            </ul>
+    </div>
+</div> <br><br>
 <?php require 'views/header.php';?>
 
    <?php    
