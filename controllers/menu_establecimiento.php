@@ -7,6 +7,9 @@
            parent::__construct();
            $this->view->render('menu_establecimiento');
        }
+         function render(){
+
+       }
 
    }
 
