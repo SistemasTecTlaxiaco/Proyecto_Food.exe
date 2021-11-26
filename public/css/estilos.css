@@ -1,6 +1,124 @@
 
 @import url('bootstrap.min.css');
 
+ /************************** DOCUMENTO GENERAL ************************/
+
+html
+{
+	font-size:10px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size:14px;line-height:1.42857143;
+	color:#333;
+	background-color:rgb(255, 229, 204)
+}
+
+
+ /************************** MAIN ************************/
+
+/*BARRA ENCABEZADO DE PAGINA INICIAL*/
+.header-main{
+	height: 50px;
+}
+/*CONTENIDO DE ENCABEZADO PRINCIPAL*/
+
+.elementos-header{
+	display: flex;/*Disposicio horizontal*/
+	flex-wrap: wrap;
+	justify-content: space-between;	/*Espacio proporcional entre los elementos*/
+	background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,19,1) 35%, rgba(255,106,0,1) 100%);
+}
+.textos-sesion{
+	margin-right: 2%;;
+	color: rgb(255, 255, 255);
+}
+/*LOGO ESQUINA SUPERIOR*/
+.logo{
+	width: 200px;
+}
+/*IMAGEN PUBLICITARIA MAIN*/
+.contenedor{
+    text-align: center;
+}
+.imagen-publi{
+	vertical-align: middle;
+	opacity: 0.9;
+	height: 800px;
+
+}
+/*TEXTO DE IMAGEN PUBLICITARIA*/
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height: 1.1;
+	font-weight: 500;
+}
+.cuerpo-centrado{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	line-height: 1.1;
+}
+
+ /************************** CARDS DE MAIN ************************/
+ .contenedor-cards{
+margin-left: 5%;
+margin-right:5%;
+}
+.row{
+	display: inline;
+	margin-left: 0.8%;
+}
+.titulo-card{
+height: 300px;
+display: grid;
+place-content: center;
+color: white; 
+text-shadow: black 0.1em 0.1em 0.2em;
+background-color: rgb(65, 0, 0);
+}
+.card{
+height: 100%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+small{
+float: right;
+font-size: 14px;
+font-weight: 500;
+color: #A19882;
+}
+.btn-cards{
+padding: 6px 25px;
+margin:1% 1% 1% 60%;
+color:rgb(182, 73, 0);     
+border-radius: 20px;
+ font-weight: bold;
+ background-color:#74ff58e9;
+ border-color:#5a0000
+}
+
+@media(max-width: 768px){
+img{
+height: 100%;
+}
+}
+@media(max-width: 575px){
+.contenedor-cards,.contenedor{
+width: 90%;
+}
+.titulo-card{
+height: 250px;
+}
+}
+ /************************** LOGINS DE ESTABLECIMIENTO Y USUARIO ************************/
 
 #inicial{
 	/*background-color: rgb(245, 170, 72);*/
@@ -18,21 +136,16 @@
 	
 
 }
-.estab{
-	background-image:url("../IMG/fondo.jpg"); ;
-}
 #login {
 	width: 450px;
 	border-radius: 4px;
-	position: absolute;
+	position: relative;
 	z-index: 2;
-	top: 50%;
-	left:65%;
+	left:50%;
 	padding: 45px;
-	transform: translate(-50%, -50%);
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	border-color: rgb(39, 189, 61);
-	background-color: #381b1ba6;
+	background-color: #f5d7b7bb;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -40,10 +153,38 @@
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 }
-#login::before{
-	background-image:url("../IMG/fondo.jpg"); ;
-	filter: blur(6px);
+
+#i{
+	position:relative;
+	width: 600px;
+	top: 10px;
+	left: 15px;
 }
+
+#imglogo{/*IMAGEN ABAJO DE DATOS DEL ESTABLECIMIENTO O COMENSAL*/
+	width: 30% ;
+   position:relative;
+   left:35%;
+
+
+}
+#telefono{
+	color: rgb(0, 0, 0);
+}
+
+#titulo{
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	padding: 12px;
+	color: rgb(75, 0, 0)
+}
+/************************** VARIOS************************/
+ #nuevo{
+width: 100%; }
+
+ /************************** ERRORES************************/
+
 #error {
 	width: 80%;
 	border-radius: 4px;
@@ -98,18 +239,22 @@
 	text-shadow: 0 -1px 0 rgba(248, 138, 64, 0.904);
 	
 }
-#datos {
-	
+
+ /************************** DATOS DEL ESTABLECIMIENTO O COMESAL MAIN ************************/
+
+#datos {	
+
+	padding: 10px;
+	position: relative;/*POSICION PARA QUE NO SE SOBREPONGA Y RESPETE OTRAS ESTRUCTURAS position:relative;*/
+	color: black;
 	width: 50%;
 	border-radius: 4px;
-	position: absolute;
-	top: 60%;
-	left:50%;
-	text-align: center;
+	left: 50%;
+	text-align: left;
 	font-weight: bold;
-	padding: 10px;/*Recuadro sin mucho margen relleno*/
 	transform: translate(-50%, -50%);
-	color: rgb(125, 25, 25);
+	color: rgb(0, 0, 0);
+	background-color:rgba(184, 182, 171, 0.405);
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -117,6 +262,30 @@
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 }
+#loguito{ /*ICONO AL LADO DE DATOS ESTABLECIMIENTO*/
+	width: 4%;
+}
+#perfil-negocio{/*IMAGEN PERFIL ESTABLECIMIENTO*/
+	width:14%;
+}
+#food{ /*TEXTO INICIAL DATOS DEL ESTABLECIMIENTO O COMENSAL*/
+	text-decoration-style: inherit;
+	font-size: 30px;
+	font-weight: bold;
+	-webkit-text-fill-color: rgb(250, 151, 58);
+	-webkit-text-stroke: 0.8px black;
+	text-shadow: 4px -2px 2px #b10404; /*derecha/izquierda, arriba/abajo, profundidad/alejamiento*/
+}
+#logo_res{/*IMAGEN AL LADO DE ESTABLECIMIENTOS DESDE COMENSAL*/
+	width: 10% ;
+   position: center;
+
+
+}
+#mini{/*IMAGEN BARRA MENU LATERAL*/
+width: 50%;
+}
+
 #input{
 	border:none;
 	border-bottom: #ff8c00;
@@ -134,12 +303,6 @@
 	top: 42%;
 	left:50%;
 	width: 300x;
-}
-#titulo{
-	font-weight: bold;
-	text-align: center;
-	padding: 12px;
-	color: rgb(206, 203, 203)
 }
 #link{
 	color: rgb(68, 223, 29);
@@ -160,57 +323,11 @@ td {
 	border: none;
 }
 
-#food{ /*TEXTO INICIAL DATOS DEL ESTABLECIMIENTO O COMENSAL*/
-	text-decoration-style: inherit;
-	font-size: 30px;
-	font-weight: bold;
-	-webkit-text-fill-color: rgb(250, 151, 58);
-	-webkit-text-stroke: 0.8px black;
-	text-shadow: 4px -2px 2px #b10404; /*derecha/izquierda, arriba/abajo, profundidad/alejamiento*/
-}
-#imglogo{/*IMAGEN ABAJO DE DATOS DEL ESTABLECIMIENTO O COMENSAL*/
-	 width: 30% ;
-	position: center;
-
-
-}
-#logo_res{/*IMAGEN AL LADO DE ESTABLECIMIENTOS DESDE COMENSAL*/
-	width: 10% ;
-   position: center;
-
-
-}
-#mini{/*IMAGEN BARRA MENU LATERAL*/
-width: 50%;
-}
-
 #vineta{
 	width: 20%;
 }
-button.redondo{ /*SECCIONES LATERALES REDONDAS*/
-	display:inline;
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	z-index: 2;/*COLOCA CIRCULOS ENCIMA DE 1 (BARRA LATERAL)*/
-	border-radius: 50%;
-	border-style: none;
-	background-color: #fd9c28;
-	color: rgb(125, 25, 25);
-	font-size: 100%; /*TAMAÑO INICIAL FUENTE*/
-transition:box-shadow 2s, transform 500ms, filter 500ms ease-in-out; 
-  }
-  #uno{/*UBICA CADA SECCION DEL MENU LATERAL CONTINUOS*/
-top: 8%;	
-  }
-  #dos{	top: 20%;  }
-  #tres{ top: 32%;  }
-  #cuatro{ top: 44%;  }
-  #cinco{ top: 56%;  }
-  #seis{ top: 68%;  }
-  #siete{ top: 80%;  }
 
-  #header2 a{
+#header2 a{
 	margin: 0;
 	padding: 10;
 	position:relative;
@@ -244,21 +361,18 @@ top: 8%;
 
 }
 
+ /************************** TABLA DE CONSULTA ************************/
+
 h1, table { text-align: center; }
-
 table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}
-
 th, td { padding: 1.5rem; font-size: 1.3rem; }
-
-#filas {background: hsl(50, 50%, 80%); }
-
+/*COLOR FILAS 1,3, IMPARES*/
+#filas {background: hsl(36, 79%, 85%); }
+/*COLOR FILAS PARES*/
+#filas:nth-child(even) { background: hsla(29, 100%, 71%, 0.761); }
 tr, td { transition: .4s ease-in; } 
-
-#firstrow {background: hsla(12, 100%, 40%, 0.5); }
-
-#filas:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
-
-td:empty {background: hsla(50, 25%, 60%, 0.7); }
+#firstrow {background: hsla(21, 100%, 54%, 0.5); }
+td:empty {background: hsl(29, 82%, 53%); }
 
 #filas:hover:not(#firstrow), td:empty {background: rgb(243, 143, 67); pointer-events: visible;}
 #filas:hover { transform: scale(1.0); font-weight: 700; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);}
