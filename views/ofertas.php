@@ -1,47 +1,43 @@
+ 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Formulario</title>
-    <meta charset="utf-8">
-    <link type="text/css" href="../public/css/estilos2.css" rel="stylesheet"/>
-</head>
-<div id="fondo" background="public/imagen/fondo.jpg">
-            </div>
-<body background="../public/imagen/fondo.jpg">
-	<p><img class="img7" src="../public/imagen/descarga.jpg" alt="mas"></p>
-	<p><img class="img8" src="../public/imagen/flecha.png" onclick="location.href='inicio_establecimiento.php'" alt="mas"></p>
-    <div id="envoltura">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0"> <meta http-equiv="Last-Modified" content="0"> 
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <title>OFERTAS</title>
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
-        <div id="contenedor">
-            </div>
-            <div id="cuerpo">
-                <form id="form-login" align="center" action="" method="post" autocomplete="off">
-				<p><font size=8 color="black" face="Cambria,arial">
-				<b>OFERTAS</b>
-				</p></font>
-				<br>
-					<p align="left"><input type="text" placeholder="Nombre del platillo" name="nombrecompleto"></p>
-					<p align="left"><br><br><input type="text" placeholder="Descripcion" name="nombrecompleto"></p>
-					
-					<label class="element_form"><br>Precio normal:
-					</label><input style="font-weight: bold;font-family:Arial;font-size:20px;" 
-					type="number" name="precio" id="precio" value="0" min="0" max="500"></div>
-					
-					<!--<label class="element_form"><br>Precio con descuento:
-					<input style="font-weight: bold;font-family:Arial;font-size:20px;position:relative; top:-10%;"
-					type="number" name="precio2" id="precio2" value="0" min="0" max="500"></p>-->
-					
-					<form action="upload.php" method="POST" enctype="multipart/form-data">
-					<input style="position:absolute; top:350px;left:200px;" type="file" name="file">
-					<p><img class="img5" src="../public/imagen/galeria.png" alt="mas"></p>
+</head>
+<body id="inicial">
+<?php require 'views/header.php';?>
+
+    <form id="login" name="login" action="<?php echo constant('URL');?>nuevo/agregarOferta" method="post" autocomplete="off">
+	<h1>REGISTRO DE OFERTAS</h1>
+	<div class="form-group">
+			<label>Nombre:</label>
+			<input type="text" class="form-control" id="nombrecompleto" name="nombrecompleto" placeholder="Introduzca nombre de platillo">
+			</div> <br>	
 	
-					</form>
-					<p><img class="img6" src="../public/imagen/mas.png" alt="mas"></p>
-					     
-                    <p id="bot"><input type="submit" id="submit" name="submit" value="ACTUALIZAR" onclick="location.href='inicio_establecimiento.php'" class="boton"></p>
+    <div class="form-group">
+			<label>Descripción:</label>
+			<textarea class="form-control" name="cara" id="cara">
+			</textarea> </div> <br>
+
+	<div class="form-group">
+			<label>Precio normal:</label>
+			<input type="number" class="form-control" name="precio" id="precio" >
+			</div> <br>
+	<div class="form-group">
+			<label>Precio con descuento:</label>
+			<input type="number" class="form-control" name="preciodesc" id="precio" >
+			</div> <br>								
+	<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="AÑADIR OFERTA" onclick="menu_es()" name="actualizar">
+
+				</input>
                 </form>
-            </div><!--fin cuerpo-->
-        </div><!-- fin contenedor -->
-    </div><!--fin envoltura-->
 </body>
 </html>
