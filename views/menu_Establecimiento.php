@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
 </head>
-<body id="inicial">
+<body id="inicial" class="con-fondo">
 <?php require 'views/header.php';?>
-<img  id="i" src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
 
     <!--Los datos del formulario son enviados a ingresar.php ahi se usan para almacenarlos en la base de datos-->
-    <form action="<?php echo constant('URL');?>nuevo/agregarPlatillo" method="post" id="login" class="login">
+    <form action="<?php echo constant('URL');?>nuevo/agregarPlatillo" enctype="multipart/form-data"  method="post" id="login" class="login">
     <h3  id="titulo">PLATILLOS</h3>
 
     <div class="form-group">
@@ -33,7 +32,7 @@
 		</div> <br>
         <div class="form-group">
 			<label>Imagen de muestra:</label>
-			<input type="file" class="form-control"name="imgplatillo" id="imgplatillo" >
+			<input type="file" class="form-control"name="archivo" id="archivo" >
 		</div> <br>
 
     <!--Al presionar el boton, se validan datos desde javascript y luego si son validos se almacenan en la base de datos-->
