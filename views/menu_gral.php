@@ -10,11 +10,20 @@
     <meta http-equiv="Pragma" content="no-cache"> 
     <title>MENÚ</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
-    <?php require 'views/header.php';?>
 
+    <div id="header">
+    <ul>
+      <li>
+   <!-- REGRESA A PAGINA ANTERIOR-->
+    <a href="<?php echo constant('URL');?>home_establecimiento"> 
+     <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
+  
+    </ul>
+   </div>  
+    
 </head>
 <h1>MENU DEL ESTABLECIMIENTO</h1>
-<table width="100" id="tabla_platos" >
+<table>
 <thead>
 <tr id="firstrow">
     <th>Nombre</th>
@@ -38,14 +47,21 @@
 
         <td><a href="<?php echo constant('URL').'menu_gral/verPlatillo/'.$platillo->id_platillos?> ">Modificar</td>
         <td><a href="<?php echo constant('URL').'menu_gral/eliminarPlatillo/'.$platillo->id_platillos?> ">Eliminar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/ofertarPlatillo/'.$platillo->id_platillos?> ">Ofertar</td>
+        <td><a href="<?php echo constant('URL').'ofertas_gral/verOferta/'.$platillo->id_platillos?> ">Ofertar</td>
         
         <?php }?>
     </tr>
    
 </tbody>
+    
+<tfoot>
+    <tr id="firstrow">
+    <th colspan="6" >
+        <a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
+        <button class="redondo" >AÑADIR PLATILLO</button></a>
+    </th>
+</tr>
+</tfoot>
+    
 </table>
-<a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
-        <button class="redondo" id="dos">
-        AÑADIR PLATILLO</button></a>
 </html>
