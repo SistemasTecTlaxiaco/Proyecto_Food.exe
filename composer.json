@@ -1,6 +1,8 @@
 {
     "name": "root/proyecto",
     "type":"proyect",
+    "license": "proprietary",
+    "description": "proyecto",
     "authors": [
         {
             "name": "Nancy2050",
