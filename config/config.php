@@ -1,6 +1,6 @@
 <?php
 //mantiene estructura sin importar que parte del documento se acceda
-define ('URL','https://fo0exe.herokuapp.com/');
+define ('URL','https://food2exe.herokuapp.com/');
 //define ('URL','https://localhost/Proyecto/');
 //variables para la base de datos
 define ('HOST','yjo6uubt3u5c16az.cbetxkdyhwsb.us-east-1.rds.amazonaws.com');
