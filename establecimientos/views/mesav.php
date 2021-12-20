@@ -86,5 +86,4 @@ if($boton12 == onclick())
 {
     echo "<br>Mesa 12 ocupado";
 }else {echo "<br> Mesa 12 desocupado";}
-
 ?>
