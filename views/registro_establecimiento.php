@@ -25,24 +25,24 @@
     <h3  id="titulo">REGISTRO ESTABLECIMIENTO</h3>
         <div class="form-group">
 			<label>Nombre del establecimiento:</label>
-			<input type="text" class="form-control" name="usuario" id="usuario" placeholder="Introduzca nombre">
+			<input type="text" required class="form-control" name="usuario" id="usuario" placeholder="Introduzca nombre">
 		</div> <br>
         <div class="form-group">
 			<label >Contraseña:</label>
-			<input type="password" class="form-control" name="contraseña" id="contraseña"placeholder="Mayusculas, minusculas y numeros" >
+			<input type="password" required class="form-control" name="contraseña" id="contraseña"placeholder="Mayusculas, minusculas y numeros" >
 		</div>
             <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
          
         <div class="form-group">
 			<label>Telefono:</label>
-			<input type="tel" class="form-control" id="telefono"  id="telefono"name="telefono" placeholder="Introduzca telefono">
+			<input type="tel" required class="form-control" id="telefono"  id="telefono"name="telefono" placeholder="Introduzca telefono">
 		</div> <br>
         <div class="form-group">
 			<label>Archivo comprobatorio:</label>
 			<input type="file" class="form-control" id="archivo" name="archivo">
 		</div> <br>
             <label>Ubicacion:</label>
-            <input type="text" class="form-control" id="ubicacion"  id="ubicacion"name="ubicacion" placeholder="Referencia ubicacion">
+            <input type="text" required class="form-control" id="ubicacion"  id="ubicacion"name="ubicacion" placeholder="Referencia ubicacion">
 
    <!--<button type="button" name="ubicacion" onclick="geoloc()" >ubicar</button>-->
     </p>       <br>
