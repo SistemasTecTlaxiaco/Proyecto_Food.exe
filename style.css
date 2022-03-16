@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+/*DEFINIMOS VARIABLES PARA PALETA DE COLORES*/
+:root{
+    --login-bg:#ffeabd; /*COLOR DE FONDO o BACKGROUND*/
+    --title-bg:#ff6b27fc;
+    --button-bg:#ffffff;
+    --soft:#f8d0a5;
+    --image-bg:#ffdb81;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Quicksand',sans-serif;
+    background-image: linear-gradient(to top, #fff8e6 0%, #ffc13ca3 100%);
+}
+.login-container{    
+    height: 20em;
+    width: 10em;
+    margin: 6em auto;
+    display: flex; /*Pone elementos uno al lado del otro*/
+    justify-content: space-between;
+    border-radius:10px;
+    overflow: hidden; /*para que no se sobrepongan*/
+}
+.login-information-container{
+    width:150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top:0.5rem;
+    background-color: var(--login-bg);
+}
+
+.title{
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+.btn{
+    width:190%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+.btn{
+    width: 180%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color:rgb(235, 32, 32);
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+    border-radius: 10px;
+}
+/*CARACTERISTICAS RESPONSIVAS*/
+
+/*Establecemos breakpoints o pixeles despues del max-width*/
+
+/*Por ejemplo, aqui el valor (de 1000px hacia abajo)
+a partir de este se deben aplicar los cambios*/
+@media screen and (max-width: 1000px ) {
+    .image-container{
+        display: none;/*Quita imagen*/
+    }
+    .login-container{
+        border: 2px solid red;
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .login-information-container{
+        width: 100%; /*Ahora ocupa el espacio de la imagen*/
+    }
+}
+@media screen and (max-width: 650px){
+    .login-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px){
+    .login-container{
+        width: 90%;
+    }
+    .login-information-container >p{
+margin:0;
+    }
+}
