@@ -56,34 +56,3 @@ body{
     border-radius: 10px;
 }
 /*CARACTERISTICAS RESPONSIVAS*/
-
-/*Establecemos breakpoints o pixeles despues del max-width*/
-
-/*Por ejemplo, aqui el valor (de 1000px hacia abajo)
-a partir de este se deben aplicar los cambios*/
-@media screen and (max-width: 1000px ) {
-    .image-container{
-        display: none;/*Quita imagen*/
-    }
-    .login-container{
-        border: 2px solid red;
-        width: 70%;
-        margin-top: 3rem;
-    }
-    .login-information-container{
-        width: 100%; /*Ahora ocupa el espacio de la imagen*/
-    }
-}
-@media screen and (max-width: 650px){
-    .login-container{
-        width: 90%;
-    }
-}
-@media screen and (max-width: 500px){
-    .login-container{
-        width: 90%;
-    }
-    .login-information-container >p{
-margin:0;
-    }
-}
