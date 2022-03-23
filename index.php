@@ -22,7 +22,7 @@
             <a href="helado.php" class="btn"><button class="btn">Helado</button></a>
             <a href="gelatina.php" class="btn"><button class="btn">Gelatina</button></a>
             <a href="pastel.php" class="btn"><button class="btn">Pastel</button></a>
-            <a href="animación" class="btn"><button class="btn">Animación promocional</button></a>
+            <a href="animación.php" class="btn"><button class="btn">Animación promocional</button></a>
 
 
         </div>
