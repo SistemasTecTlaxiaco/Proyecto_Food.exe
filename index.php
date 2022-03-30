@@ -105,7 +105,6 @@ var el = document.querySelector('#entityID1');
 el.setAttribute("gltf-model", 'gltf:url(juguito.glb)');
 el.setAttribute("scale",'.50 .50 .50'); })
 
-
 </script>
 </body>
 </html>
