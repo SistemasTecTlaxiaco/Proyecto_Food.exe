@@ -51,6 +51,7 @@
         <button class="button" id="btn7"> Refresco </button>
         <button class="button" id="btn8"> Café </button>
         <button class="button" id="btn9"> Jugo </button>
+        <a href="animacion.php">  <button class="button" id=""> Animación </button></a>
     </div>
 <body style="margin: 0px; overflow: hidden;"> 
     <a-scene embedded arjs="degubUIEnabled: false" vr-mode-ui="enabled: false"> <!--Scene embedded será el lanzador de la realidad aumentada-->
