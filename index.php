@@ -7,6 +7,8 @@
     <title>Modelos 3D</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script> 
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+
 <style>
     .button{
     background-color: #FFA75A;
@@ -51,9 +53,9 @@
         <button class="button" id="btn7"> Refresco </button>
         <button class="button" id="btn8"> Café </button>
         <button class="button" id="btn9"> Jugo </button>
-        <a href="animacion.php">  <button class="button" id=""> Animación </button></a>
+        <a href="eje.html">  <button class="button" id=""> Mesero </button></a>
     </div>
-<body style="margin: 0px; overflow: hidden;"> 
+<body  id="camara"  style="margin: 0px; overflow: hidden;"> 
     <a-scene embedded arjs="degubUIEnabled: false" vr-mode-ui="enabled: false"> <!--Scene embedded será el lanzador de la realidad aumentada-->
         <a-marker present="hiro">
             <a-entity id="entityID1" gltf-model="pizzara.glb" scale=".30 .30 .30">
